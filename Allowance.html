@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Permissions-Policy" content="...">
+    <link rel="stylesheet" href="Allowance Style.css">
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <title>Dropdown Menu</title>
+</head>
+
+<body>
+
+    <a href="index.html">
+        <div id="logo">
+            <img src="src/img/WiseBudgeLogo.png" class="logo">
+        </div>
+    </a>
+    <h1 class="Allowance">Allowance</h1>
+    
+    <form id="myForm" onsubmit="submitForm(); return false;">
+        <label for="allowanceType" class="common-label">Select Allowance Type</label>
+        <select id="allowanceType" class="custom-select">
+            <option value="Weekly Allowance">Weekly Allowance</option>
+            <option value="Daily Allowance">Daily Allowance</option>
+            <option value="Monthly Allowance">Monthly Allowance</option>
+        </select>
+    </form>
+
+    <form id="Amount" onsubmit="submitForm(); return false;">
+        <label for="value" class="amount-label">Enter Allowance Amount</label>
+        <input id="value" type="number" min="100" max="10000">
+
+    </form>
+    <button type="button" class="go-back-button" onclick="goBack()">Back</button>
+    <button type="submit" class="submit-button" onclick="submitForm()">Submit</button>
+
+        <div id="displayValue"></div>
+    </form>
+    <script src="Allowancejs.js"></script>
+</body>
+
+</html>

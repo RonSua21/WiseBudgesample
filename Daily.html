@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>CALENDAR</title>
+    <link rel="stylesheet" href="DAILYstyle.css">
+    <script src="Dailyscript.js" defer></script>
+    <script>
+        function handleDown(expenseType) {
+            // Add logic to display "Better luck next time"
+            alert("SIR PINAGPUYATAN NAMIN TO");
+        }
+
+        function handleThumbsUp(expenseType) {
+            // Add logic to display "Good job"
+            alert("Good job");
+        }
+    </script>
+    <style>
+        #chart-container {
+            transform: translate(-30%, -65%);
+            width: 300px; /* Adjust the width of each canvas */
+            height: auto;
+            margin: 20px; /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker"> May </span>
+                <div class="year-picker" id="year-picker">
+                    <span class="year-change" id="pre-year"></span>
+                    <span id="year">2020 </span>
+                    <span class="year-change" id="next-year"></span>
+                </div>
+            </div>
+
+            <div class="calendar-body">
+                <div class="calendar-week-days">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days">
+                </div>
+            </div>
+            <div class="calendar-footer">
+            </div>
+            <div class="date-time-formate">
+                <div class="day-text-formate">TASK</div>
+                <div class="date-time-value">
+                    <div class="time-formate">02:51:20</div>
+                    <div class="date-formate">23 - July - 2022</div>
+                </div>
+                <div class="month-list"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Remove the extra closing </div> tag -->
+    <div class="expense-inputs">
+                <div class="expense-input" data-type="personal">
+                    <h2 class="perso-h2">Personal Expenses</h2>
+                    <p id="storedDataPersonal"></p>
+                    <input type="number" placeholder="Enter Personal Expense">
+                    <style>
+                        .styled-button {
+                            font-family: Arial;
+                            font-weight: bold;
+                            color: rgb(0, 0, 0);
+                            margin-top: 10px;
+                            border-radius: 5px;
+                            width: 200px;
+                            height: 30px;
+                            /* Add more styles as needed */
+                        }
+                        .thumbs-up,
+                        .thumbs-down {
+                        font-size: 20px;
+                       margin-top: 10px;
+                        border-radius: 5px;
+                            /* Add more styles as needed */
+                        }
+                    </style>
+                    
+                    <button type="button" onclick="saveExpenseData('personal')" class="styled-button">Save Personal Expense</button>
+                    <button class="thumbs-up" onclick="handleThumbsUp('personal')">✔️</button>
+                    <button class="thumbs-down" onclick="handleDown('personal')">❌</button>
+                </div>
+                <div class="expense-input" data-type="transportation">
+                    <h2 class="transpo-h2">Transportation Expenses</h2>
+                    <p id="storedDataTransportation"></p>
+                    <input type="number" placeholder="Enter Transportation Expense">
+                    <button type="button" onclick="saveExpenseData('transportation')" class="styled-button">Save Transportation Expense</button>
+                    <button class="thumbs-up" onclick="handleThumbsUp('personal')">✔️</button>
+                    <button class="thumbs-down" onclick="handleDown('personal')">❌</button>
+                </div>
+                <div class="expense-input" data-type="school">
+                    <h2 class="expenses-h2">Expenses</h2>
+                    <p id="storedDataSchool"></p>
+                    <input type="number" placeholder="Enter School Expense">
+                    <button type="button" onclick="saveExpenseData('school')" class="styled-button">&nbsp;&nbsp;Save&nbsp;School&nbsp;Expenses&nbsp;&nbsp;</button>
+
+                    <button class="thumbs-up" onclick="handleThumbsUp('personal')">✔️</button>
+                    <button class="thumbs-down" onclick="handleDown('personal')">❌</button>
+                </div>
+                <div class="expense-input" data-type="other">
+                    <h2 class="other-h2">Other Expenses</h2>
+                    <p id="storedDataOther"></p>
+                    <input type="number" placeholder="Enter Other Expense">
+                    <button type="button" onclick="saveExpenseData('other')" class="styled-button">&nbsp;&nbsp;&nbsp;&nbsp;Save Other Expense&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button class="thumbs-up" onclick="handleThumbsUp('personal')">✔️</button>
+                    <button class="thumbs-down" onclick="handleDown('personal')">❌</button>
+                </div>
+            </div>
+</body>
+</html>
